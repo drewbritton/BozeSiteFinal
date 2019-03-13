@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/* A comment. */
+/* background picture and color. Also centered it to the page. Stretched the size to the full screen. */
+body {
+	 background-image: url("11.jpg");
+	 background-position:center;
+ background-color: #cccccc;
+ background-size: 100%;
+ 
+}
+
+/* centering the section portion */
+section {
+			margin-right:12%;
+			padding:4px;
+			max-width: 1100px;
+			margin: auto;
+			text-align:center;
+}
+/* centering the paragraph portion */
+p {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+			font-family: cursive;
+
+	}
+/* centering all of h2 fonts */		
+	h2 {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+	}
+
+h3 {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+}
+/* put everything under h3 class p1 onto the left side */
+h3.p1 {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:left;
+}
+
+/* put everything under h2 class p1 onto the left side */
+h2.p1 {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:left;
+}
+/* giving h2 with the class main a border */
+h2.main {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+			border-style:solid;
+}
+/* giving h1 with the class main a border which is the header of my page */
+h1.main {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+			border-style:solid;
+			font-size:28pt;
+			color:#fff;
+			background-color: rgba(20,0,20, .5)
+}
+
+h1#primaryheading {
+	text-align:center;
+}
+
+aside {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+	text-align:center;
+}
+
+aside#menu {
+			float:right;
+			width:11%;
+			padding:4px;
+			min-width:100px;
+			max-width: 1100px;
+			text-align:center;
+}
+/* I am mainly centering my whole page */
+footer {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+			color:#fff;
+			background-color: rgba(20,0,20, .5)
+}
+
+
+header {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+}
+img {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+}
+
+article {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+			color:#fff;
+			background-color: rgba(20,0,20, .5)
+}
+/* found this on google somewhere */
+.border {
+  top: 0;
+  left: 0;
+  border: 25px solid #000;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* giving different font sizes to each seperate class */
+p.p1 {
+			font-size:200%;
+			
+			 
+}
+
+
+p.p2 {
+			font-size:250%;
+			font-weight:bold;
+			font-family: cursive;
+			color:#fff;
+			background-color: rgba(20,0,20, .5)
+			
+}
+
+
+p.p3 {
+			font-size:20pt	;
+			
+			
+}
+
+
+p.p4 {
+			font-size:14pt;
+			font-family: cursive;
+			 color:#fff;	
+			background-color: rgba(20,0,20, .5)
+}
+/* centering my table to the middle of my page */
+table {
+	margin: 2px;
+	padding: 2px;
+	max-width: 1100px;
+			margin: auto;
+			text-align:center;
+}
+/* giving my id a font size and font type courier new	 */
+p#america {
+			font-size:12pt;
+			font-family: Courier New;
+}
+form {
+	font-size: 12pt;
+	font-weight: bold;
+}
+/* got the code from wearafieldtrip.com/journal/css-create-dropdown-navigation-bar */
+/* this is the background of the nav bar. */
+nav {
+    background: #000;
+    width: 100%;
+	background-color: rgba(20,0,20, .5)
+}
+/* placement of the nav bar */
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+}
+/* this line is used to give the sections that the mouse hovers over a highlight */
+/* i chose the color grey */
+    nav ul li:hover {
+        background: #808080;
+    }
+/* this gives the color white and spacing on the tabs */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 25px;
+}
+/* the color on the text for the drop down changes accordingly */
+    nav ul li a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+	nav ul li.parent ul.child {
+    display: none;
+}
+/* this gives you the drop down, also the color of the drop down which I changed to grey */
+nav ul li.parent:hover ul.child {
+    display: block;
+    position: absolute;
+    top: 40px;
+background-color: rgba(20,0,20, .9)
+}
+
+/* this one gives the drop down menu a width that makes things look neater */
+nav ul li.parent ul.child li {
+    width: 9em;
+    padding: 0;
+}
+nav ul li.parent ul.child li:hover {
+    background: #008FBA;
+}
+nav ul li.parent ul.child li a {
+    display: block;
+}
+p.time {
+			float:right;
+			font-family: courier new;
+		
+}
+/* got this code from https://www.w3schools.com/howto/howto_css_bg_change_scroll.asp and made it my own*/
+/* also took out <di v> and customized it to work on my page */
+/* had to change height in order to make the border disappear. Was making a mess of my page. */
+/* 450% height would fit my whole page */
+
+
+
+.bg-image {
+  /* height for the whole page */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* The code to adjust the text that pops up in screen */
+.bg-text {
+  background-color: rgba(20,0,20, .2); /* Color of the see through text box, the last digit is the opacity level */
+  color: white; /*text color */
+  font-weight: bold; 
+  font-size: 25px;
+  border: 10px solid #f1f1f1; /* border color .1 for opacity*/
+  position: fixed; /* Stay fixed */
+  top: 87%; /* changed position of the text box */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px; /* changed width of text box to fit my text */
+  padding: 20px;
+  text-align: center;
+}
+.time{
+color:#fff;
+}

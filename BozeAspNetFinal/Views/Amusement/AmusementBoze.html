@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<link type="text/css" rel="stylesheet" href="../../Content/style2.css">
+
+<meta charset="utf-8" />
+
+<!-- <title> gives the head of the page -->
+<title>Events</title>
+
+</head>
+
+<body class="border">
+
+<header>
+<!-- got both theese script off of quackit this code is used to display the time and date on top of the page-->
+<!-- used class time to float to the right -->
+<p class="time">
+<script>
+  var currentDate = new Date(),
+      day = currentDate.getDate(),
+      month = currentDate.getMonth() + 1,
+      year = currentDate.getFullYear();
+  document.write(day + "/" + month + "/" + year)
+</script>
+<script>
+	var currentTime = new Date(),
+      hours = currentTime.getHours(),
+      minutes = currentTime.getMinutes();
+
+	if (minutes < 10) {
+	 minutes = "0" + minutes;
+  }
+
+	var suffix = "AM";
+	if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+	}
+	if (hours == 0) {
+	 hours = 12;
+	}
+
+	document.write(hours + ":" + minutes + " " + suffix)
+</script></p>
+<br>
+<p id="top"></p>
+ <!-- <h1> size of font and type -->
+<h1 class="main">Wolly World</h1>
+<!-- created drop downs for all categories except for home -->
+<!-- also links to other pages -->
+<nav>
+  <ul>
+    <li class="parent"><a href="#">Amusement Center</a>
+      <ul class="child">
+        <li><a href="./AmusementBoze.html">Wolly World</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+      </ul>
+    </li>
+	</ul>
+	</nav>
+
+<hr />
+</header>
+
+<article>
+<!-- put a class for css fonts -->
+<p class="p2"><u>Welcome To Wolly World</u></p>
+<p class="p4">Summer is coming soon! Purchase your season pass early for a discount!<br>
+We have amazing rides and a beautiful night life!</p>
+
+<br>
+<p class="MySlides" style="max-width:800px">
+  <img class="slides" alt="slides" src="1.jpeg" style="width:100%">
+  <img class="slides" alt="slides" src="2.jpg" style="width:100%">
+  <img class="slides" alt="slides" src="3.jpg" style="width:100%">
+  <img class="slides" alt="slides" src="4.jpg" style="width:100%">
+</p>
+<!-- script for automating the picture switches -->
+
+<!-- put the script in between my event images because I wanted this specific image to switch -->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br>
+
+<p class="p4">Along with all the rides at Wolly World we also have amazing waterparks and rides! <br>
+<i>Purchase tickets at the purchases page now to receive an early purchase discount!<br>
+Season passes are also available at an unbeatable price!<br>
+</i></p><br>
+<img src="../../Assets/Images/5.jpg" title="eventLarge" alt="photography" width="750" height="400"><br>
+<img src="../../Assets/Images/6.jpg" title="eventLarge" alt="photography" width="750" height="400"><br>
+<hr />
+
+<p class = "p3"> These are the upcoming events at Wolly World! Don't miss out!</p>
+<!-- table got help from a classmate -->
+<!-- these are spaced out by 4 sections and used &emsp; to make it look nicer -->
+<table>
+<thead>
+<tr>
+
+<th>Upcoming Events</th>
+<th>&emsp; Date</th>
+<th>&emsp; Time</th>
+
+</tr>
+</thead>
+
+<tbody>
+<tr>
+
+<td>Ariana Grande Concert</td>
+<td>&emsp;02/11/2020
+<td>&emsp;6PM</td>
+
+<tr>
+
+<td>Wolly's Sea Show</td>
+<td>&emsp;02/20/2020
+<td>&emsp;12PM</td>
+
+</tr>
+
+<tr>
+
+<td>Escape Room Challenge</td>
+<td>&emsp;02/27/2020
+<td>&emsp;3PM</td>
+
+</tr>
+
+</tbody>
+<tfoot>
+<tr>
+
+<td>Sam Smith Live</td>
+<td>&emsp;03/11/2020
+<td>&emsp;3PM</td>
+
+</tr>
+</tfoot>
+</table><br>
+
+<!-- got help from dave rupert -->
+<!-- this is an input validation -->
+<p>Please enter your email to receive news letters and upcoming event reminders!</p>
+<form action="/users/signup" method="post">
+    &emsp;&emsp;&ensp;<label for="email">Email Address:&emsp;</label>
+   <input id="email" type="email" required>
+   &emsp;  <input type="submit" value="Submit">
+</form>
+</article>
+
+<footer>
+<hr />
+<!-- <address space is used to give an address section -->
+<address>
+Written by Oliver Yang<br>
+Contact me at:<a href="mailto:oyang7@uw.edu">oyang7@uw.edu</a><br>
+Spaceship F33<br>
+<p id="america"> Room 302 </p>
+</address>
+<article>
+<a href = "https://the101.828venues.com/services/">Need a planner? Check out our Vendor</a><br>
+<!-- <i> is used for italicizing font -->
+Wolly's Amusement Center HTML &copy; <i>2019</i>
+</article>
+
+</footer>
+
+<a href="#top"> Go to top</a>
+
+</body>
+
+</html>

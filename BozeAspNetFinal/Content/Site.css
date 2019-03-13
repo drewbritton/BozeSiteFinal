@@ -1,0 +1,151 @@
+﻿/*
+    Drew Britton
+    03/010/19
+    TINFO 230 Web Design Principles
+    Team Boze
+    Website Project (revision 03, ASP.NET MVC 5 bootstrap 4)
+*/
+
+@import "susy";
+@import "compass/reset";
+
+body {
+    background-image: url('../Assets/Images/home_background01.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+
+    /* Code sourced from https://leaverou.github.io/css3patterns/#carbon 
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px; */
+}
+
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: silver;
+    background-image: none;
+}
+
+.headerBackground {
+    background-image: url('../Assets/Images/home_background01.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.headerAlpha {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(244, 244, 244, 0.81);
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 3.0em;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: monospace;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: monospace;
+    font-size: 1.8em;
+}
+
+h4 {
+    font-family: sans-serif;
+    font-size: 1.8em;
+}
+
+h5 {
+    font-family: sans-serif;
+    font-size: 1.8em;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#imgCenter {
+    display: block;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+/* Code sourced from https://codepen.io/NazarTheVis/pen/zqXMqP */
+.stars, .twinkling, .clouds {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 440px;
+}
+
+/* Code sourced from https://codepen.io/NazarTheVis/pen/zqXMqP */
+.stars {
+    z-index: 0;
+    background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+}
+
+/* Code sourced from https://codepen.io/NazarTheVis/pen/zqXMqP */
+.twinkling {
+    z-index: 1;
+    background: transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
+    animation: move-twink-back 200s linear infinite;
+}
+
+/* Code sourced from https://codepen.io/NazarTheVis/pen/zqXMqP */
+.clouds {
+    z-index: 2;
+    background: transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+/* Code sourced from https://codepen.io/NazarTheVis/pen/zqXMqP */
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+/* Code sourced from https://codepen.io/NazarTheVis/pen/zqXMqP */
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}

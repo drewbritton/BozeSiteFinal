@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Checkout</h2>
+<br />
+<br />
+
+<h3>Your order has been placed! Expect a shipping date of @DateTime.Now.AddDays(7).ToShortDateString()</h3>
+
+<br />
+<br />
+
+@Html.ActionLink("Back to Products List", "Index", "Product")
+

@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title> Starlight Hospital </title>
+	
+    <link href="../../Content/hospital_style.css" type="text/css" rel="stylesheet">
+	
+</head>
+<body>
+	
+	<div class="top">
+		<div>
+		 Contact Us +91 96366 20000 / 01 | starlight@hospital.com 
+		</div>
+	</div>
+	
+	<article class="logo">
+		<div>
+			<table>
+				<tr>
+					<td><img src ="../../Assets/Images/logo.png" alt="logo" /></td>
+					<td id= "titlestar" style="font-family:calibri;"> Starlight Hospital </td>
+					<td id="logolist" > <br> <br>
+							<a href="index.html">HOME</a> 
+							<a href="about.html">ABOUT US</a>  
+							<a href="service.html">SERVICE</a>
+							<a href="doctor.html">DOCTORS</a> 
+							<a href="contact.html">CONTACT US</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+<div class ="doctor">
+<img src= "../../Assets/Images/hospital.jpg" section class="background">
+<section class="layer">
+ <p style="font-family:calibri;font-size:400%">Find a Doctor <br>
+<font size= "5px"> Use our smart search to find the best doctor for your healthcare needs</font></p>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Doctor..">
+</section>
+</div>
+
+
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Specialization</th>
+  </tr>
+  <tr>
+    <td>Reena Gupta</td>
+    <td>Urology</td>
+  </tr>
+  <tr>
+    <td>Renee Z. Rinaldi</td>
+    <td>Rheumatology</td>
+  </tr>
+  <tr>
+    <td>Elizabeth A. Arena</td>
+    <td>Surgery- General Surgery</td>
+  </tr>
+  <tr>
+    <td>Alvin Arellano</td>
+    <td>Pediatrics</td>
+  </tr>
+  <tr>
+    <td>Jason S. Cohen</td>
+    <td>Infectious Diseases</td>
+  </tr>
+  <tr>
+    <td>Robert S. Pashman</td>
+    <td>Orthopedics</td>
+  </tr>
+  <tr>
+    <td>Monika Saeedian</td>
+    <td>IM/ Allergy</td>
+  </tr>
+  <tr>
+    <td>Warren M. Lent</td>
+    <td>Plastic Surgery</td>
+  </tr>
+  <tr>
+    <td>Kamren Toluie</td>
+    <td>Cardiology</td>
+  </tr>
+  <tr>
+    <td>Oleg E. Bess</td>
+    <td>Psychiatry</td>
+  </tr>
+  <tr>
+    <td>Veronica Porshe Anderson</td>
+    <td>Surgery- General Surgery</td>
+  </tr>
+  <tr>
+    <td>Illona Kliener</td>
+    <td>Pediatrics</td>
+  </tr>
+</table>
+<script>
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>						
+<br>
+<br>
+					
+					
+					<td style="padding-left:20px;"> </td>
+				</tr>
+			
+				
+			</table>
+		</div>
+	</div>
+	
+	
+	<div class="nav_down">
+		<div>
+		 &copy; Starlight Hospital, site designed & developed by UWT Studemts
+		</div>
+	</div>
+</body>
+</html>

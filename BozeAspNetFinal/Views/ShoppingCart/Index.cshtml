@@ -1,0 +1,80 @@
+﻿@model TeamBozeAspSite.Models.ShoppingCartViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<script src="~/Scripts/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        // Document.ready -> link up remove event handler
+        $(".RemoveLink").click(function () {
+            var productToDelete = $(this).attr("data-id");
+            if (productToDelete != '') {
+                // perform the ajax post
+                $.post("/ShoppingCart/RemoveFromCart", { "id": productToDelete },
+                    function (data) {
+                        if (data.ItemCount == 0) {
+                            $('#row-' + data.DeleteId).fadeOut('slow');
+                        } else {
+                            $('#item-count-' + data.DeleteId).text(data.ItemCount);
+                        }
+                        $('#cart-total').text(data.CartTotal);
+                        $('#update-message').text(data.Message);
+                        $('#cart-status').text('Cart (' + data.CartCount + ')');
+                    });
+            }
+        });
+    });
+</script>
+<h3>
+    <em>Review</em> your cart:
+</h3>
+<br />
+<br />
+<br />
+<p class="button">
+    @Html.ActionLink("Checkout", "Checkout", "ShoppingCart")
+</p>
+<div id="update-message">
+
+</div>
+<table class="table-striped">
+    <tr>
+        <th>
+            Product Name &emsp;&ensp;
+        </th>
+        <th>
+            Price (each) &emsp;&ensp;
+        </th>
+        <th>
+            Quantity &emsp;&ensp;
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.CartItems) {
+        <tr id="row-@item.ProductId">
+            <td>
+                @Html.ActionLink(item.Product.ProductName, "Details", "Product", new { id = item.ProductId }, null) &emsp;&ensp;
+            </td>
+            <td>
+                @item.Product.Price &emsp;&ensp;
+            </td>
+            <td id="item-count-@item.ProductId">
+                @item.Quantity &emsp;&ensp;
+            </td>
+            <td>
+                <a href="#" class="RemoveLink" data-id="@item.ProductId">Remove from cart</a>&emsp;&ensp;
+            </td>
+        </tr>
+    }
+    <tr>
+        <td>
+            <strong>Total</strong> &emsp;&ensp;
+        </td>
+        <td></td>
+        <td></td>
+        <td id="cart-total">
+            <strong>@Model.CartTotal</strong> &emsp;&ensp;
+        </td>
+    </tr>
+</table>

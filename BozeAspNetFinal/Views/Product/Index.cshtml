@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TeamBozeAspSite.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>View ordered products and add them to your cart! Or customize your own by clicking on the Computer Store link above.</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShippingDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShippingDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductId }) |
+                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = item.ProductId }, "")
+            </td>
+        </tr>
+    }
+
+</table>
+
+<ul class="pagination">
+
+    @for (int i = 1; i <= ViewBag.LastPage; i++) {
+        if (ViewBag.CurrentPage == i) {
+            <li class="active">
+                @Html.ActionLink($"Page {i}", "Index", new { id = i })
+            </li>
+        } else {
+            <li>
+                @Html.ActionLink($"Page {i}", "Index", new { id = i })
+            </li>
+        }
+    }
+
+</ul>

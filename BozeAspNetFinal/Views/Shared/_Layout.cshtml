@@ -21,36 +21,34 @@
 
     </header>
 
-
-    <main>
-
-    </main>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><strong>Boze &amp; Beyond</strong></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+            @Html.ActionLink("Boze & Beyond", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item-active"><a class="nav-link" href="D:/home/site/wwwroot/Views/Home/Index.cshtml">Home<span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="D:/home/site/wwwroot/Views/Agencies/index.html">Agencies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="D:/home/site/wwwroot/Views/Amusement/AmusementBoze.html">Amusement</a></li>
-                    <li class="nav-item"><a class="nav-link" href="D:/home/site/wwwroot/Views/Entertainment/boze.html">Entertainment</a></li>
-                    <li class="nav-item"><a class="nav-link" href="D:/home/site/wwwroot/Views/Shopping/store.html">Shopping</a></li>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item-active">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Healthcare", "Index", "Agencies", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Amusement", "Index", "Amusement", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Entertainment", "Index", "Entertainment", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Shopping", "Index", "Shopping", null, new { @class = "nav-link" })</li>
                 </ul>
             </div>
-            
         </div>
-        
-
-
     </nav>
 
     <div class="container body-content">
-        @RenderBody()
+
+        <main id="main">
+            @RenderBody()
+        </main>
+        
+        <br />
         <hr />
+        <br />
+
         <footer>
             <p>&copy; @DateTime.Now.Year - University of Washington &amp; Boze Elementary</p>
         </footer>

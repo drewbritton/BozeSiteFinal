@@ -23,5 +23,29 @@ namespace BozeAspNetFinal.Controllers {
 
             return View();
         }
+
+        public ActionResult Agencies() {
+            ViewBag.Message = "Agencies";
+
+            return View();
+        }
+
+        public ActionResult Amusement() {
+            ViewBag.Message = "Amusement";
+
+            return View();
+        }
+
+        public ActionResult Entertainment() {
+            ViewBag.Message = "Entertainment";
+
+            return View();
+        }
+
+        public ActionResult Shopping() {
+            ViewBag.Message = "Shopping";
+
+            return View();
+        }
     }
 }
